@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { Outlet } from 'react-router-dom';
+import Header from './header/Header';
+import Footer from './footer/Footer';
 
 const Layout = () => {
-  const a = 0;
-
   return (
     <div>
-      Layout
+      <Header />
+        <Outlet />
+      <Footer />
     </div>
   );
 };

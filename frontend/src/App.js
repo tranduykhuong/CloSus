@@ -1,5 +1,7 @@
 import React from 'react';
-import './styles/style.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/style.css';
+
 import Navigation from './routes';
 
 const App = () => (

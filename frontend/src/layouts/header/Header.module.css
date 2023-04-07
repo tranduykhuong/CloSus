@@ -1,0 +1,8 @@
+.header {
+  width: 100vw;
+  height: 50px;
+  background-color: aquamarine;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
