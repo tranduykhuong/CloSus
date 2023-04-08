@@ -1,104 +1,108 @@
 import React from 'react';
-import classes from './Footer.module.css'
+import classes from './Footer.module.css';
 import { Link } from 'react-router-dom';
-import "./layout.css";
+import './layout.css';
+import img2 from './img/img-2.jpg';
+import img3 from './img/img-3.jpg';
 
 function Button({ content }) {
-  return (
-    <div
-      className="px-16 shadow min-h-min leading-[50px] text-lg
+    return (
+        <div
+            className="px-16 shadow min-h-min leading-[50px] text-lg
                         text-white font-semibold button-color max-w-sm rounded-tl-2xl rounded-br-2xl animate-bounce
                         hover:cursor-pointer button-color_hover hover:shadow-lg  hover:animate-none"
-    >
-      {content}
-    </div>
-  );
+        >
+            {content}
+        </div>
+    );
 }
 
 const Footer = () => {
-  return (
-    <div className={classes.footer}>
-      <div className="relative w-full bottom-0 mt-52">
-        <div className="flex justify-around bg-color  h-80 w-full pt-24">
-          <div className="text-slate-600">
-            <Link to="/" className="block">
-              {/* <img src={Logo} className=" p-0 h-16 w-16" alt="dsds" /> */}
-            </Link>
-
-            <Link to="/" className="block my-1 hover:text-cyan-500 text-xs">
-              <span className="">LaslesVPN </span>
-              Nền tảng chia sẻ Tài liệu và Làm bài
-            </Link>
-
-            <Link to="/thiThu" className="block my-1 hover:text-cyan-500 text-xs">
-              Thi thử dành cho sinh viên
-            </Link>
-
-            <p className="block m-7 text-slate-400">
-              {/* <MdCopyright className="inline-block" /> */}
-              2022Lasles
-              <span className="">VPN</span>
-            </p>
-          </div>
-
-          <div className="flex justify-around">
-            <div className="min-w-[16em]">
-              <h3 className="ml-2 mb-2 font-bold text-xs text-slate-800">
-                Tài liệu
-              </h3>
-              <ul className="text-slate-600">
-                <li className="m-1 ">
-                  <Link to="/taiLieu" className="hover:text-cyan-500 text-xs">
-                    Hướng dẫn lấy tài liệu
-                  </Link>
-                </li>
-                <li className="m-1">
-                  <Link to="/thiThu" className="hover:text-cyan-500 text-xs">
-                    Hướng dẫn thi thử
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="min-w-[10em]">
-              <h3 className="ml-2 mb-2 font-bold text-xs text-slate-800">SLST</h3>
-              <ul className="text-slate-600">
-                <li className="m-1">
-                  <Link to="/about" className="hover:text-cyan-500 text-xs">
-                    Chúng tôi
-                  </Link>
-                </li>
-                <li className="m-1">
-                  <Link to="/" className="hover:text-cyan-500 text-xs">
-                    Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+    return (
+        <div className={classes.footer}>
+            <footer className={`${classes['footer-section']}`}>
+                <div className="container">
+                    <div className={`${classes['footer-cta']} ${'pt-5'} ${'pb-5'}`}>
+                        <div className="row">
+                            <div className="col-xl-4 col-md-4 mb-30 text-center">
+                                <div className={classes['single-cta']}>
+                                    <div className={classes['cta-text']}>
+                                        <h4>Find us</h4>
+                                        <span>1010 Avenue, sw 54321, chandigarh</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-4 col-md-4 mb-30 text-center">
+                                <div className={classes['single-cta']}>
+                                    <i className="fas fa-phone" />
+                                    <div className={classes['cta-text']}>
+                                        <h4>Call us</h4>
+                                        <span>9876543210 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-xl-4 col-md-4 mb-30 text-center">
+                                <div className={classes['single-cta']}>
+                                    <i className="far fa-envelope-open" />
+                                    <div className={classes['cta-text']}>
+                                        <h4>Mail us</h4>
+                                        <span>mail@info.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={classes['copyright-area']}>
+                    <div className="container">
+                        <div className="row">
+                            <div className={`${'text-center'} ${'text-lg-left'} ${'col-xl-4'} ${'col-lg-4'}`}>
+                                <div className={classes['copyright-text']}>
+                                    <p>
+                                        Copyright © 2018, All Right Reserved{' '}
+                                        <a href="https://codepen.io/anupkumar92/">Anup</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                className={`${'text-lg-right'} ${'col-xl-6'} ${'col-lg-6'} ${'ml-5'} ${'d-none'} ${'text-right'} ${'d-lg-block'}`}
+                            >
+                                <div className={classes['footer-menu']}>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Terms</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Privacy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Policy</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <div className="flex justify-center w-full z-20">
-          <div
-            className="flex absolute top-[-160px] p-14 bg-white 
-                      shadow-md shadow-slate-600 rounded-md"
-          >
-            <div className="max-w-md">
-              <h2 className="font-bold text-base leading-10">
-                Hãy biến ngôi nhà của bạn thành khu vườn, tại sao không?
-              </h2>
-              <p className="my-1 font-normal text-slate-600 text-base">
-                Làm việc cùng chúng tôi, những người có cùng đam mê
-              </p>
-            </div>
-
-            <a href="" className="flex-1 ml-40 my-auto  ">
-              <Button content="Liên hệ admin" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+    );
+};
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+
